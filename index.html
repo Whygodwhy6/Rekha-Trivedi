@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rekha Trivedi</title>
+    <title>Indian Classical Singer</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,6 +12,18 @@
             padding: 0;
             background-color: #f9f5ed;
             text-align: center;
+        }
+
+        .header {
+            background-color: #8b0000;
+            padding: 10px;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
         }
 
         .container {
@@ -70,16 +82,40 @@
             transform: scale(1.1);
             background-color: #a00000;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            letter-spacing: 4px;
+        }
+
+        .contact {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .contact.show {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
 
 <body>
+    <div class="header">
+        <a href="index.html">English</a>
+        <a href="hindi.html">हिन्दी</a>
+        <a href="gujarati.html">ગુજરાતી</a>
+    </div>
     <div class="container">
-        <h1>Indian Proffesional Singer</h1>
-        <div class="image-placeholder"><img class="image-placeholder" src="Grandma3.png" alt="Rekha Trivedi"></div>
-        <p><strong>About:</strong> A brief biography of her journey in Indian classical music.</p>
+        <h1>Indian Classical Singer</h1>
+        <div class="image-placeholder"><img src="Grandma3.png"></div>
+        <p><strong>About:</strong> <b>Rekha Trivedi</b> is an Indian singer known for her contributions to Gujarati and
+            Rajasthani music. From a young age, she displayed a strong inclination towards music, which her parents
+            nurtured. She received classical training under Shri Rasiklal Andharia in Bhavnagar, Gujarat, and later
+            earned a degree in music (Sangeet Visharad) from Gandharva Sangeet Vidyalaya in Mumbai. Her career gained
+            momentum when renowned Gujarati composer Shri Avinash Vyas selected her for his program "Alakh Ne Otle,"
+            where she captivated audiences with the song "Ram Tame Sitajini Tole Na Avo." Rekha has collaborated with
+            esteemed music directors such as Ninu Mazumdar, Dilip Dholakia, and Ashit Desai. She is a regular
+            broadcaster on All India Radio and Doordarshan and has performed internationally in countries like Belgium
+            and Singapore. Her recordings are available under labels like T-Series and Venus, and she has lent her voice
+            to various Hindi and Rajasthani albums, showcasing her versatility across languages.</p>
 
         <div class="works">
             <h2>Popular Works</h2>
@@ -90,12 +126,31 @@
             </ul>
         </div>
 
-        <div class="contact">
+        <div class="contact" id="contact">
             <h2>Contact</h2>
             <a href="mailto:rekha.trivedi@gmail.com" class="contact-button">Email</a>
             <a href="tel:+919869807486" class="contact-button">Call</a>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const contactSection = document.getElementById("contact");
+
+            if (contactSection) {
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            contactSection.classList.add("show");
+                            observer.unobserve(contactSection); // Stop observing after animation
+                        }
+                    });
+                }, { threshold: 0.3 }); // Adjust threshold for when animation triggers
+
+                observer.observe(contactSection);
+            }
+        });
+    </script>
 </body>
 
 </html>
