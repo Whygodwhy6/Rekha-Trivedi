@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="gu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ભારતીય શાસ્ત્રીય ગાયક</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f5ed;
+            text-align: center;
+        }
+
+        .header {
+            background-color: #8b0000;
+            padding: 10px;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #8b0000;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .works {
+            margin-top: 20px;
+        }
+
+        .works ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .works li {
+            background: #fff;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            color: white;
+            background-color: #8b0000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            text-decoration: none;
+        }
+
+        .contact-button:hover {
+            transform: scale(1.1);
+            background-color: #a00000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .contact.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="index.html">English</a>
+        <a href="hindi.html">हिन्दी</a>
+        <a href="gujarati.html">ગુજરાતી</a>
+    </div>
+    <div class="container">
+        <h1>ભારતીય શાસ્ત્રીય ગાયક</h1>
+        <div class="image-placeholder"><img src="Grandma3.png"></div>
+        <p><strong>વિશે:</strong>
+            <b>રેખા ત્રિવેદી </b>એક ભારતીય ગાયિકા છે, જે ગુજરાતી અને રાજસ્થાની સંગીતમાં તેમના યોગદાન માટે જાણીતી છે.
+            બાળપણથી જ
+            તેમને સંગીતમાં ઊંડી રસ હતો, જે તેમના માતા-પિતાએ પ્રોત્સાહન આપ્યું. તેમણે ગુજરાતના ભાવનગરમાં શ્રી રસિકલાલ
+            અંધારિયાથી શાસ્ત્રીય સંગીતની તાલીમ લીધી અને ત્યારબાદ મુંબઈના ગંધર્વ સંગીત વિદ્યાલયમાંથી સંગીત વિશારદની
+            ડિગ્રી પ્રાપ્ત કરી. તેમના કારકિર્દીને ત્યારે ગતિ મળી જ્યારે પ્રસિદ્ધ ગુજરાતી સંગીતકાર શ્રી અવિનાશ વ્યાસએ
+            તેમને તેમના કાર્યક્રમ "અલખ ને ઓટલે" માટે પસંદ કર્યા, જ્યાં તેમણે "રામ તમે સીતાજીની ટોળે ના આવો" ગીતથી
+            શ્રોતાઓને મંત્રમુગ્ધ કરી દીધા. રેખાએ નિનૂ મઝુમદાર, દિલીપ ઢોળકિયા અને આશિત દેસાઈ જેવા પ્રખ્યાત સંગીત
+            દિગ્દર્શકો સાથે કામ કર્યું છે. તેઓ ઓલ ઈન્ડિયા રેડિયો અને દૂરદર્શન પર નિયમિત પ્રસારિત થાય છે અને બેલ્જિયમ,
+            સિંગાપુર જેવા અનેક દેશોમાં પ્રસ્તુતિ આપી ચૂકી છે. તેમના ગીતો ટી-સિરીઝ અને વીનસ જેવી મહત્વની સંગીત કંપનીઓ
+            હેઠળ પ્રકાશિત થયા છે, અને તેમણે હિન્દી તથા રાજસ્થાની આલ્બમોમાં પણ પોતાનો અવાજ આપ્યો છે, જે તેમની બહુમુખી
+            પ્રતિભાને દર્શાવે છે.
+        </p>
+
+        <div class="works">
+            <h2>પ્રખ્યાત કૃતિઓ</h2>
+            <ul>
+                <li>રાગ યમન</li>
+                <li>રાગ ભૈરવ</li>
+                <li>રાગ બાગેશ્રી</li>
+            </ul>
+        </div>
+
+        <div class="contact" id="contact">
+            <h2>સંપર્ક કરો</h2>
+            <a href="mailto:example@email.com" class="contact-button">ઈમેલ</a>
+            <a href="tel:+919876543210" class="contact-button">કોલ કરો</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const contactSection = document.getElementById("contact");
+
+            if (contactSection) {
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            contactSection.classList.add("show");
+                            observer.unobserve(contactSection); // Stop observing after animation
+                        }
+                    });
+                }, { threshold: 0.3 }); // Adjust threshold for when animation triggers
+
+                observer.observe(contactSection);
+            }
+        });
+    </script>
+</body>
+
+</html>

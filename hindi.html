@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>भारतीय शास्त्रीय गायिका</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f5ed;
+            text-align: center;
+        }
+
+        .header {
+            background-color: #8b0000;
+            padding: 10px;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #8b0000;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .works {
+            margin-top: 20px;
+        }
+
+        .works ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .works li {
+            background: #fff;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            color: white;
+            background-color: #8b0000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            text-decoration: none;
+        }
+
+        .contact-button:hover {
+            transform: scale(1.1);
+            background-color: #a00000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .contact.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="index.html">English</a>
+        <a href="hindi.html">हिन्दी</a>
+        <a href="gujarati.html">ગુજરાતી</a>
+    </div>
+    <div class="container">
+        <h1>भारतीय शास्त्रीय गायिका</h1>
+        <div class="image-placeholder"><img src="Grandma3.png"></div>
+        <p><strong>परिचय:</strong>
+            <b> रेखा त्रिवेदी </b>एक भारतीय गायिका हैं जो गुजराती और राजस्थानी संगीत में अपने योगदान के लिए जानी जाती
+            हैं। बचपन
+            से ही उन्हें संगीत में गहरी रुचि थी, जिसे उनके माता-पिता ने प्रोत्साहित किया। उन्होंने गुजरात के भावनगर में
+            श्री रसिकलाल अंधारिया से शास्त्रीय संगीत की शिक्षा ली और बाद में मुंबई के गंधर्व संगीत विद्यालय से संगीत
+            विशारद की डिग्री प्राप्त की। उनके करियर को तब गति मिली जब प्रसिद्ध गुजराती संगीतकार श्री अविनाश व्यास ने
+            उन्हें अपने कार्यक्रम "अलख ने ओटले" के लिए चुना, जहाँ उन्होंने "राम तमे सीताजीनी टोले ना आवो" गीत से दर्शकों
+            को मंत्रमुग्ध कर दिया। रेखा ने नीनू मजूमदार, दिलीप ढोलकिया और आशित देसाई जैसे प्रतिष्ठित संगीत निर्देशकों के
+            साथ काम किया है। वे ऑल इंडिया रेडियो और दूरदर्शन पर नियमित रूप से प्रसारित होती हैं और बेल्जियम, सिंगापुर
+            जैसे कई देशों में अपनी प्रस्तुतियां दे चुकी हैं। उनके गीत टी-सीरीज़ और वीनस जैसी प्रमुख संगीत कंपनियों के
+            तहत जारी किए गए हैं, और उन्होंने हिंदी और राजस्थानी एल्बमों में भी अपनी आवाज़ दी है, जिससे उनकी बहुमुखी
+            प्रतिभा प्रदर्शित होती है।
+        </p>
+
+        <div class="works">
+            <h2>प्रसिद्ध रचनाएँ</h2>
+            <ul>
+                <li>राग यमन</li>
+                <li>राग भैरव</li>
+                <li>राग बागेश्री</li>
+            </ul>
+        </div>
+
+        <div class="contact" id="contact">
+            <h2>संपर्क करें</h2>
+            <a href="mailto:rekha.trivedi@gmail.com" class="contact-button">ईमेल</a>
+            <a href="tel:+919869807486" class="contact-button">कॉल करें</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const contactSection = document.getElementById("contact");
+
+            if (contactSection) {
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            contactSection.classList.add("show");
+                            observer.unobserve(contactSection); // Stop observing after animation
+                        }
+                    });
+                }, { threshold: 0.3 }); // Adjust threshold for when animation triggers
+
+                observer.observe(contactSection);
+            }
+        });
+    </script>
+</body>
+
+</html>
